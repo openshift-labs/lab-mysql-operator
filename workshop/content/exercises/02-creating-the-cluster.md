@@ -13,7 +13,7 @@ oc apply -f percona-xtradb-cluster-operator/deploy/secrets.yaml
 Set up a watch of pods created for the MySQL cluster.
 
 ```execute-2
-oc get pods -l name=percona-xtradb-cluster-operator --watch
+oc get pods -l app=pxc,cluster=cluster1 --watch
 ```
 
 Create the MySQL cluster.
