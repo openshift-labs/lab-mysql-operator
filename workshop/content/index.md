@@ -6,9 +6,9 @@ ExitSign: Start Workshop
 ---
 
 
-The [Wikipedia](https://en.wikipedia.org/wiki/MySQL) site describes MySQL as a:
+[Wikipedia](https://en.wikipedia.org/wiki/MySQL) describes MySQL as:
 
-> relational database management system (RDBMS). Its name is a combination of "My", the name of co-founder Michael Widenius's daughter,[7] and "SQL", the abbreviation for Structured Query Language.
+> a relational database management system (RDBMS). Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language.
 
 Before you can use MySQL for your applications, you need to deploy a MySQL server cluster.
 
