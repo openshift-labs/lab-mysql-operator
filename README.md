@@ -1,13 +1,26 @@
-Lab - MySQL Operator
+Lab - Percona XtraDB MySQL Cluster Operator
 ====================
 
-This workshop provides an introduction to deploying a MySQL cluster using the MySQL operator. Use of the operator is from the perspective of a developer.
+This workshop deploys a MySQL cluster using the [Percona XtraDB MySQL Cluster (PXC) Operator][pxcohome]. Use of the operator is from the perspective of a developer.
 
-The workshop uses the HomeRoom workshop environment in the learning portal configuration. You will need to be a cluster admin in order to deploy it.
+The workshop uses the HomeRoom workshop environment in the learning portal configuration. You need to be a cluster admin to deploy it.
 
-When the URL for the workshop environment is accessed, a workshop session will be created on demand. This will include a project for the session, into which the MySQL operator will have been pre-installed.
+When the URL for the workshop environment is accessed, a workshop session will be created on demand. This includes a project for the session, into which the PXC operator will have been pre-installed.
 
-Deploying the Workshop
+Deploying the Workshop - "Production" Deployment
+----------------------
+
+To deploy the workshop, clone this repository and run the new deployment script. Note that `new.sh` calls both the deploy-spawner and build-workshop scripts, so the workshop image stream tag will be built from these local workshop sources.
+
+```sh
+./scripts/new.sh
+```
+
+`New.sh` also deploys openshift-acme to manage Let's Encrypt TLS certificates for the lab's Route.
+
+To edit and iteratively deploy local workshop sources, or to redeploy the spawner after making RBAC or setup resources changes, see below.
+
+Deploying the Workshop - Development Cycle
 ----------------------
 
 To deploy the workshop, first clone this Git repository to your own machine.
@@ -87,3 +100,5 @@ To delete special resources for CRDs and cluster roles for the MySQL operator, r
 ```
 
 Only delete these last set of resources if the MySQL operator is not being used elsewhere in the cluster. Ideally this workshop environment should only be deployed in an expendable cluster, and not one which is shared for other work.
+
+[pxcohome]: https://github.com/percona/percona-xtradb-cluster-operator

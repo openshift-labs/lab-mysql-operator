@@ -11,7 +11,7 @@ var google_analytics = `
 `;
 
 var config = {
-    site_title: 'Using the MySQL operator',
+    site_title: 'Percona XtraDB MySQL Cluster Operator',
 
     analytics: google_analytics,
 
