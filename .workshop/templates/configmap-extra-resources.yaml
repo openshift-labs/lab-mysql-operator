@@ -206,6 +206,30 @@ objects:
                 }
               }
             }
+          },
+          {
+              "kind": "SecurityContextConstraints",
+              "apiVersion": "security.openshift.io/v1",
+              "metadata": {
+                  "name": "${project_namespace}-wordpress-anyuid",
+                  "labels": {
+                    "app": "${JUPYTERHUB_APPLICATION}-${JUPYTERHUB_NAMESPACE}",
+                    "project": "${project_namespace}"
+                  }
+              },
+              "priority": 888,
+              "allowedCapabilities": [
+                  "SYS_RESOURCE"
+              ],
+              "seLinuxContext": {
+                  "type": "RunAsAny"
+              },
+              "runAsUser": {
+                  "type": "RunAsAny"
+              },
+              "users": [
+                  "system:serviceaccount:${project_namespace}:default"
+              ]
           }
         ]
       }

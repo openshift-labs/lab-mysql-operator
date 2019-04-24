@@ -9,8 +9,8 @@
 # Basic setup, as in README: New namespace, deploy spawner, and build local
 # workshop src imagestream tag. Stop building local src after push upstream.
 oc new-project workshops
-./scripts/deploy-spawner.sh
-#./scripts/build-workshop.sh # To use local workshop source.
+./.workshop/scripts/deploy-spawner.sh
+#./.workshop/scripts/build-workshop.sh # To use local workshop source.
 
 # Gross. Relax scc to allow any authenticated user on entire cluster to run
 # container with anyuid, including root. For library/wordpress image.
