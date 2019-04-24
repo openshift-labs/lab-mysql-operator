@@ -10,15 +10,15 @@ When the URL for the workshop environment is accessed, a workshop session will b
 Deploying the Workshop - "Production" Deployment
 ----------------------
 
-To deploy the workshop, clone this repository and run the new deployment script. Note that `new.sh` calls both the deploy-spawner and build-workshop scripts, so the workshop image stream tag will be built from these local workshop sources.
+To deploy the PXC Operator workshop using the most recent image built from this repository at [quay.io/openshiftlabs/lab-mysql-operator][quay-this-container], clone this repository and run the new deployment script.
 
 ```sh
 ./scripts/new.sh
 ```
 
-`New.sh` also deploys openshift-acme to manage Let's Encrypt TLS certificates for the lab's Route.
+The `new.sh` script also relaxes SCC for the benefit of WordPress and deploys [openshift-acme][osacme] to provision a valid TLS certificate for the lab's Route.
 
-To edit and iteratively deploy local workshop sources, or to redeploy the spawner after making RBAC or setup resources changes, see below.
+`New.sh` runs `deploy-spawner.sh`, but does not run `build-workshop.sh` to build an image stream tag from local workshop sources. To edit and iteratively deploy local workshop sources, or to redeploy the spawner after making RBAC or setup changes, see below.
 
 Deploying the Workshop - Development Cycle
 ----------------------
@@ -101,4 +101,6 @@ To delete special resources for CRDs and cluster roles for the MySQL operator, r
 
 Only delete these last set of resources if the MySQL operator is not being used elsewhere in the cluster. Ideally this workshop environment should only be deployed in an expendable cluster, and not one which is shared for other work.
 
+[osacme]: https://github.com/tnozicka/openshift-acme
 [pxcohome]: https://github.com/percona/percona-xtradb-cluster-operator
+[quay-this-container]: https://quay.io/repository/openshiftlabs/lab-mysql-operator
