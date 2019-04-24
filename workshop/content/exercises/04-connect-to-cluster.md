@@ -7,7 +7,7 @@ NextPage: 05-deploy-app
 Start a pod running a MySQL command-line client. When this command completes, you'll be at the prompt for a shell in the new `mycli` pod, from which you can login to the MySQL monitor to query the XtraDB cluster.
 
 ```execute-1
-oc run -i -t mycli --image=mysql -- /bin/sh
+oc run mycli -i -t --rm --restart=Never --image=mysql -- /bin/bash
 ```
 
 ### ProxySQL
