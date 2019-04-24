@@ -1,10 +1,8 @@
 ---
-Title: Connecting to the MySQL Cluster
+Title: The Operator at Work
 PrevPage: 03-cluster-on-cluster
 NextPage: 05-connect-to-cluster
 ---
-
-## Operator at Work
 
 ### Scaling the pxc
 
