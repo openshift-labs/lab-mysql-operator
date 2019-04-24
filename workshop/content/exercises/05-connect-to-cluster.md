@@ -1,7 +1,7 @@
 ---
 Title: Connecting to the MySQL Cluster
-PrevPage: 03-cluster-on-cluster
-NextPage: 05-deploy-app
+PrevPage: 04-operator-at-work
+NextPage: 06-deploy-app
 ---
 
 Start a pod running a MySQL command-line client. When this command completes, you'll be at the prompt for a shell in the new `mycli` pod, from which you can login to the MySQL monitor to query the XtraDB cluster.

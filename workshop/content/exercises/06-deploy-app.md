@@ -1,6 +1,6 @@
 ---
 Title: Deploying an Application
-PrevPage: 04-connect-to-cluster
+PrevPage: 05-connect-to-cluster
 NextPage: ../finish
 ---
 
