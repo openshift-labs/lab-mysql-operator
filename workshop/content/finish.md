@@ -6,7 +6,7 @@ ExitSign: Finish Workshop
 
 ## Percona XtraDB Mysql Cluster Operator
 
-In this lab, we used the [Percona XtraDB Cluster Operator][pxchome] to deplay a MySQL server cluster on [Red Hat OpenShift][openshift]. With a managed db cluster in place, we deployed the popular WordPress Content Management System using our `pxc` resource as a backend to store WordPress's data. We experimented with how the Operator allows scaling, recovering, and manageing the database cluster in common Kubernetes terms, showing how [Operators][operator-gh-org] extend clusters running Kubernetes and Kubernetes distributions like OpenShift to create custom first-class API resources.
+In this lab, we used the [Percona XtraDB Cluster Operator][pxchome] to deplay a MySQL server cluster on [Red Hat OpenShift][openshift]. With a managed db cluster in place, we deployed the popular WordPress CMS using our `pxc/cluster1` as a backend to store WordPress's data. We experimented with how the Operator allows scaling, recovering, and managing the database cluster in common Kubernetes terms, showing how [Operators][operator-gh-org] extend clusters running Kubernetes and Kubernetes distributions like OpenShift to create custom first-class API resources.
 
 ## Keep Learning
 
