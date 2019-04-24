@@ -15,6 +15,14 @@ metadata:
   name: "cluster1"
 ```
 
+You examine the entire manifest for the database cluster Custom Resource:
+
+```execute-1
+less mysql-cluster.yaml
+```
+
+(Press `q` to exit the pager.)
+
 Since Custom Resource Definitions (CRDs) extend the Kubernetes API on our cluster, we can handle a `pxc` as a first-class resource. API tools like `oc` or `kubectl` can `get` and `describe` the `pxc` we spun up, for example:
 
 ```execute-1
@@ -27,7 +35,7 @@ oc describe pxc cluster1
 
 `Describe`-ing our `pxc`, `cluster1`, shows details about the database cluster, including its demands for underlying cluster resources and its size &ndash; the number of member pods to spread across the OpenShift cluster.
 
-Notice how the living Custom Resource running on the cluster matches up to its manifest in the `cr.yaml` file we looked at above. The elements of both were specified in the CRD created in advance by the OpenShift administrator.
+Notice how the living Custom Resource running on the cluster matches up to its manifest in the `mysql-cluster.yaml` file we looked at above. The elements of both were specified in the CRD created in advance by the OpenShift administrator.
 
 ```sh
   Pxc:
