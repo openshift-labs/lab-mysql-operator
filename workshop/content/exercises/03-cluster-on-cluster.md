@@ -6,7 +6,7 @@ NextPage: 04-connect-to-cluster
 
 ## Kubernetes cluster elements
 
-In the previous step, we instantiated a `PerconaXtraDBCluster` resource (a `pxc`, for short). We can see this by looking at the Custom Resource (CR) we created. An excerpt from its manifest file, `cr.yaml`, shows what `kind` of Resource our `cluster1` is.
+In the previous step, we instantiated a `PerconaXtraDBCluster` resource (a `pxc`, for short). We can see this by looking at the Custom Resource (CR) we created. An excerpt from its manifest file, `mysql-cluster.yaml`, shows what `kind` of Resource our `cluster1` is.
 
 ```yaml
 apiVersion: "pxc.percona.com/v1alpha1"
@@ -32,7 +32,7 @@ Notice how the living Custom Resource running on the cluster matches up to its m
 ```sh
   Pxc:
     Affinity:
-      Anti Affinity Topology Key:  kubernetes.io/hostname
+      Anti Affinity Topology Key:  none
     Allow Unsafe Configurations:   false
     Image:                         percona/percona-xtradb-cluster-operator:0.3.0-pxc
     Pod Disruption Budget:

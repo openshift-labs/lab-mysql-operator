@@ -1,3 +1,8 @@
 #!/bin/bash
 
 git clone -b release-0.3.0 https://github.com/percona/percona-xtradb-cluster-operator
+
+mv workshop /opt/app-root/workshop
+
+# Delete all non required files from the image
+rm -rf Dockerfile README.md LICENSE
