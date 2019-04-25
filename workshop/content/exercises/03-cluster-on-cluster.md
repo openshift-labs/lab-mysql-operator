@@ -15,7 +15,7 @@ metadata:
   name: "cluster1"
 ```
 
-You examine the entire manifest for the database cluster Custom Resource:
+You can examine the entire manifest for the database cluster Custom Resource:
 
 ```execute-1
 less mysql-cluster.yaml
