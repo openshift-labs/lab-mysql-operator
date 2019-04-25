@@ -7,19 +7,6 @@ The workshop uses the HomeRoom workshop environment in the learning portal confi
 
 When the URL for the workshop environment is accessed, a workshop session will be created on demand. This includes a project for the session, into which the PXC operator will have been pre-installed.
 
-Deploying the Workshop - "Production" Deployment
-----------------------
-
-To deploy the PXC Operator workshop using the most recent image built from this repository at [quay.io/openshiftlabs/lab-mysql-operator][quay-this-container], clone this repository and run the new deployment script.
-
-```sh
-./.workshop/scripts/new.sh
-```
-
-The `new.sh` script also relaxes SCC for the benefit of WordPress and deploys [openshift-acme][osacme] to provision a valid TLS certificate for the lab's Route.
-
-`New.sh` runs `deploy-spawner.sh`, but does not run `build-workshop.sh` to build an image stream tag from local workshop sources. To edit and iteratively deploy local workshop sources, or to redeploy the spawner after making RBAC or setup changes, see below.
-
 Deploying the Workshop - Development Cycle
 ----------------------
 
