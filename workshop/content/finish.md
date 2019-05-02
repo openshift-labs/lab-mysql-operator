@@ -1,6 +1,7 @@
 ---
 Sort: 3
 Title: Workshop Summary
+PrevPage: exercises/06-deploy-app
 ExitSign: Finish Workshop
 ---
 
