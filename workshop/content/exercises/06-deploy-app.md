@@ -22,6 +22,10 @@ Retrieve the route info, and visit the generated URL in a new browser tab to set
 oc get routes
 ```
 
+The URL should be:
+
+http://wordpress-%project_namespace%.%cluster_subdomain%/
+
 After WordPress's "famous five-minute install" creates and populates its database on the XtraDB Cluster, you can log in to your new WordPress site, backed by an automated 5-node Percona XtraDB MySQL Cluster.
 
 [wp]: https://wordpress.org
