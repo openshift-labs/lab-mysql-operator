@@ -6,7 +6,7 @@ NextPage: 02-create-cluster
 
 The MySQL operator is installed into a project to monitor requests to create a MySQL cluster. The operator can only be deployed and setup by a cluster admin of the OpenShift cluster.
 
-In this workshop environment, the MySQL operator has been pre-installed into your project ready for use. The user you are running the workshop as, has also been delegated the appropriate roles to allow it to create a MySQL cluster.
+The MySQL operator has been pre-installed into your project and is ready for use during this workshop. Your user has been granted the appropriate permissions to create a managed MySQL database cluster.
 
 To validate that your user has been granted the appropriate roles, you can use the `oc auth can-i` command to see whether you can create Kubernetes Custom Resources (CR) of the kind the Percona XtraDB MySQL Cluster Operator responds to.
 

@@ -52,7 +52,28 @@ watch oc get pods -l app=pxc,cluster=cluster1
 oc delete pod cluster1-pxc-2
 ```
 
-In the bottom terminal's pod watch, you can see member pod `cluster1-pxc-2` terminate. Next, you'll see a new replica started by the pxc Operator to replace it.
+In the bottom terminal's pod watch, you can see member pod `cluster1-pxc-2` terminate:
+
+```
+NAME                  READY     STATUS        RESTARTS   AGE
+cluster1-proxysql-0   3/3       Running       0          9m
+cluster1-pxc-0        1/1       Running       0          10m
+cluster1-pxc-1        1/1       Running       0          8m
+cluster1-pxc-2        1/1       Terminating   0          6m
+cluster1-pxc-3        0/1       Running       0          1m
+```
+
+Next, you'll see a new replica started by the pxc Operator to replace it:
+
+```
+NAME                  READY     STATUS    RESTARTS   AGE
+cluster1-proxysql-0   3/3       Running   0          12m
+cluster1-pxc-0        1/1       Running   0          12m
+cluster1-pxc-1        1/1       Running   0          10m
+cluster1-pxc-2        1/1       Running   0          2m
+cluster1-pxc-3        1/1       Running   0          3m
+cluster1-pxc-4        0/1       Running   0          1m
+```
 
 Once you've seen a simple node failure recovery, stop the pod watch.
 

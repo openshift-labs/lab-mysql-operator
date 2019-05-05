@@ -52,7 +52,17 @@ Notice how the living Custom Resource running on the cluster matches up to its m
     Size:        3
 ```
 
-Let's stop the pod watch to free the lower terminal now that we know all three members of the MySQL database cluster are running.
+Let's stop the pod watch to free the lower terminal once we know all three members of the MySQL database cluster are running. You should see the following in the lower terminal:
+
+```
+NAME                  READY     STATUS    RESTARTS   AGE
+cluster1-proxysql-0   3/3       Running   0          5m
+cluster1-pxc-0        1/1       Running   0          5m
+cluster1-pxc-1        1/1       Running   0          4m
+cluster1-pxc-2        1/1       Running   0          2m
+```
+
+Once you see all three pods are ready, kill the watch by running:
 
 ```execute-2
 <ctrl+c>
