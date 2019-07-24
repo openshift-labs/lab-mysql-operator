@@ -1,15 +1,13 @@
-apiVersion: "pxc.percona.com/v1alpha1"
+apiVersion: "pxc.percona.com/v1"
 kind: "PerconaXtraDBCluster"
 metadata:
   name: "cluster1"
-  finalizers:
-    - delete-pxc-pods-in-order
 spec:
   secretsName: my-cluster-secrets
   pxc:
     size: 3
     allowUnsafeConfigurations: false
-    image: percona/percona-xtradb-cluster-operator:0.3.0-pxc
+    image: percona/percona-xtradb-cluster-operator:1.1.0-pxc
     resources:
       requests:
         memory: 1G
@@ -29,7 +27,7 @@ spec:
   proxysql:
     enabled: true
     size: 1
-    image: percona/percona-xtradb-cluster-operator:0.3.0-proxysql
+    image: percona/percona-xtradb-cluster-operator:1.1.0-proxysql
     resources:
       requests:
         memory: 1G
@@ -52,7 +50,7 @@ spec:
     serverHost: monitoring-service
     serverUser: pmm
   backup:
-    image: percona/percona-xtradb-cluster-operator:0.3.0-backup
+    image: percona/percona-xtradb-cluster-operator:1.1.0-backup
     storages:
       s3-us-west:
         type: s3
