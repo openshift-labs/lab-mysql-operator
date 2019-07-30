@@ -23,7 +23,7 @@ oc get pxc/cluster1 -o yaml | sed -e 's/size: 3/size: 5/' | oc apply -f -
 Since `oc apply` returns asynchronously, you can watch pod events in the upper terminal now:
 
 ```execute-1
-watch oc get pods -l app=pxc,cluster=cluster1
+watch oc get pods -l app.kubernetes.io/component=pxc,app.kubernetes.io/instance=cluster1
 ```
 
 Interupt the watch and the log follow once you've observed the Operator scaling its `pxc/cluster1` MySQL cluster.
@@ -43,7 +43,7 @@ What happens if you kill one of the member pods of our `pxc/cluster1` database c
 Let's watch:
 
 ```execute-2
-watch oc get pods -l app=pxc,cluster=cluster1
+watch oc get pods -l app.kubernetes.io/component=pxc,app.kubernetes.io/instance=cluster1
 ```
 
 **NOTE**: Make sure the watch shows at least 3 database cluster Pods, `cluster1-pxc-0`, `-1`, and `-2`, each with `1/1` of their containers in the `READY` state before deleting the pod in the next step.

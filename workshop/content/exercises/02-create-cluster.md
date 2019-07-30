@@ -21,7 +21,7 @@ oc apply -f secrets.yaml
 Set up a watch to see the Pods that will be created for the MySQL cluster. This will display in the lower terminal.
 
 ```execute-2
-watch oc get pods -l app=pxc,cluster=cluster1
+watch oc get pods -l app.kubernetes.io/component=pxc,app.kubernetes.io/instance=cluster1
 ```
 
 Create the MySQL cluster by applying the Custom Resource manifest to the OpenShift cluster:
