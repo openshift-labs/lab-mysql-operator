@@ -42,7 +42,7 @@ Notice how the living Custom Resource running on the cluster matches up to its m
     Affinity:
       Anti Affinity Topology Key:  none
     Allow Unsafe Configurations:   false
-    Image:                         percona/percona-xtradb-cluster-operator:0.3.0-pxc
+    Image:                         percona/percona-xtradb-cluster-operator:1.1.0-pxc
     Pod Disruption Budget:
       Max Unavailable:  1
     Resources:

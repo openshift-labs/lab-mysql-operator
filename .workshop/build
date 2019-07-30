@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone -b release-0.3.0 https://github.com/percona/percona-xtradb-cluster-operator
+git clone -b release-1.1.0 https://github.com/percona/percona-xtradb-cluster-operator
 
 mv workshop /opt/app-root/workshop
 

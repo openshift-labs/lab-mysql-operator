@@ -23,6 +23,8 @@ objects:
     resources:
     - perconaxtradbclusters
     - perconaxtradbbackups
+    - perconaxtradbclusterbackups
+    - perconaxtradbclusterrestores
     verbs:
     - get
     - list
