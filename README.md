@@ -12,6 +12,14 @@ Deploying the Workshop - Development Cycle
 
 To deploy the workshop, first clone this Git repository to your own machine.
 
+After cloning the repository, run:
+
+```
+git submodule update --remote
+```
+
+This is required to checkout the deployment scripts, which are pulled in via a Git submodule.
+
 Next create a project in OpenShift into which the workshop is to be deployed.
 
 ```
