@@ -32,12 +32,12 @@ From within the top level of the Git repository, now run:
 ./.workshop/scripts/deploy-spawner.sh
 ```
 
-The name of the deployment will be ``mysql-lab``.
+The name of the deployment will be ``lab-mysql-operator``.
 
 You can determine the hostname for the URL to access the workshop by running:
 
 ```
-oc get route mysql-lab
+oc get route lab-mysql-operator
 ```
 
 Editing the Workshop
